@@ -3,7 +3,8 @@ SITENAME = 'AI-generated blog'
 SITEURL = ""
 
 PATH = "content"
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'static']
+EXTRA_PATH_METADATA = {'static/favicon.ico': {'path': 'favicon.ico'},}
 
 TIMEZONE = 'Europe/London'
 
