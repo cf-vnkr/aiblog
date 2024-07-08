@@ -9,4 +9,4 @@ COPY . .
 
 RUN git config --add --local core.sshCommand 'ssh -i ./id_rsa'
 
-CMD [ "python", "./writer`.py" ]
+CMD [ "python", "writer`.py" ]
