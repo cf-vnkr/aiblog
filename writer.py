@@ -52,6 +52,8 @@ news_types: list[str] = [
     "daily joke"
 ]
 
+subprocess.run(['git','pull'])
+
 while True:
     news_theme = random.choice(news_types)
 
