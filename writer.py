@@ -127,5 +127,5 @@ while True:
         print("Couldn't build or commit: ",e)
         continue
 
-    hour = 36
+    hour = 3600
     time.sleep(random.randint(6, 36) * hour)

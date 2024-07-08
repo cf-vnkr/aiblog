@@ -1,0 +1,6 @@
+services:
+  aiblog:
+    image: aiblog:latest
+    env_file:
+      - aiblog.env
+    restart: unless-stopped
