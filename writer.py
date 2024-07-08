@@ -20,12 +20,13 @@ def return_answer (response):
     answer = string.split("\n\n")[1]
     return answer
 
-def write_article (title, title_slug, story, image, today, today_date):
+def write_article (title, title_slug, story, news_theme, image, today, today_date):
     file_name = f"content/{today_date}-{title_slug}.md"
     try:
         f = open(file_name, "a")
         f.write(f"Title: {title}\n")
         f.write(f"Date: {today}\n")
+        f.write(f"Category: {news_theme}\n")
         f.write("\n")
         f.write("> This article is AI generated!\n")
         f.write("\n")
@@ -43,7 +44,12 @@ news_types: list[str] = [
     "cyber security",
     "smart home",
     "IoT",
-    "gaming"
+    "gaming",
+    "green energy",
+    "autosports",
+    "space exploration",
+    "mobile devices",
+    "daily joke"
 ]
 
 while True:
@@ -105,7 +111,7 @@ while True:
         continue
 
     try:
-        write_article(title, title_slug, article, image_name, today, today_date)
+        write_article(title, title_slug, article, news_theme, image_name, today, today_date)
     except Exception as e:
        # By this way we can know about the type of error occurring
         print("Couldn't invoke write_article: ",e)
