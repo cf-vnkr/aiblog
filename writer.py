@@ -60,7 +60,7 @@ title = return_answer(response) # TODO: wrap in try except to break the loop
 
 title_slug = slugify(title)
 
-prompt = f"Create anarticle with the title {title}. Make it between 500 and 1500 characters long."
+prompt = f"Create an article with 3 paragraphs named {title}."
 response = requests.post(
   f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/@cf/meta/llama-3-8b-instruct",
     headers={"Authorization": f"Bearer {AUTH_TOKEN}"},
