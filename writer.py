@@ -90,7 +90,6 @@ while True:
     )
 
     try:
-        print(response_article)
         article = return_answer(response_article)
         print(article)
     except Exception as e:
