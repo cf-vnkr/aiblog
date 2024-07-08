@@ -1,7 +1,6 @@
 Title: "Ransomware Attacks Surge 50% in Q2: Experts Warn of Growing Threat to Small Businesses"
 Date: 2024-07-08 14:06
 
-> note
 > This article is AI generated!
 
 ![Alt Text](images/2024-07-08-ransomware-attacks-surge-50-in-q2-experts-warn-of-growing-threat-to-small-businesses.png)

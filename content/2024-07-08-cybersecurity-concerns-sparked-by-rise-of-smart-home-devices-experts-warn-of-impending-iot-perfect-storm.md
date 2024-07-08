@@ -1,7 +1,6 @@
 Title: "Cybersecurity Concerns Sparked by Rise of Smart Home Devices, Experts Warn of Impending IoT 'Perfect Storm'"
 Date: 2024-07-08 15:55
 
-> note
 > This article is AI generated!
 
 ![Alt Text](images/2024-07-08-cybersecurity-concerns-sparked-by-rise-of-smart-home-devices-experts-warn-of-impending-iot-perfect-storm.png)

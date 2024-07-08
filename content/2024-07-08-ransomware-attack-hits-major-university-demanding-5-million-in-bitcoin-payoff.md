@@ -1,7 +1,6 @@
 Title: "Ransomware Attack Hits Major University, Demanding $5 Million in Bitcoin Payoff"
 Date: 2024-07-08 16:00
 
-> note
 > This article is AI generated!
 
 ![Alt Text](images/2024-07-08-ransomware-attack-hits-major-university-demanding-5-million-in-bitcoin-payoff.png)

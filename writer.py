@@ -90,4 +90,4 @@ write_article(title, title_slug, article, image_name, today, today_date)
 
 subprocess.run(['pelican', 'content'])
 subprocess.run(['git', 'add', '.'])
-subprocess.run(['git', 'commint', '-m', today])
+subprocess.run(['git', 'commit', '-m', today])
