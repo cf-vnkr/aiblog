@@ -22,9 +22,6 @@ def return_answer (response):
 
 def write_article (title, title_slug, story, news_theme, image, today, today_date):
     file_name = f"content/{today_date}-{title_slug}.md"
-    print(title)
-    print(story)
-    print(news_theme)
     try:
         f = open(file_name, "a")
         f.write(f"Title: {title}\n")
@@ -72,6 +69,7 @@ while True:
 
     try:
         title = return_answer(response_title)
+        print(title)
     except Exception as e:
        # By this way we can know about the type of error occurring
         print("Couldn't generate title: ",e)
@@ -92,7 +90,9 @@ while True:
     )
 
     try:
+        print(response_article)
         article = return_answer(response_article)
+        print(article)
     except Exception as e:
        # By this way we can know about the type of error occurring
         print("Couldn't generate article body: ",e)
