@@ -68,8 +68,8 @@ while True:
     )
 
     try:
-        response_title = response
-        title = return_answer(response_title)
+        response.status_code
+        title = return_answer(response)
         print(title)
     except Exception as e:
        # By this way we can know about the type of error occurring
@@ -91,8 +91,8 @@ while True:
     )
 
     try:
-        response_article = response
-        article = return_answer(response_article)
+        response.status_code
+        article = return_answer(response)
         print(article)
     except Exception as e:
        # By this way we can know about the type of error occurring

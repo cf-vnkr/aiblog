@@ -1,6 +1,6 @@
 AUTHOR = 'AI'
 SITENAME = 'AI-generated blog'
-SITEURL = ""
+SITEURL = "https://blog.cfdemo.site"
 
 PATH = "content"
 STATIC_PATHS = ['images', 'static']
