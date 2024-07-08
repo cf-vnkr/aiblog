@@ -1,5 +1,3 @@
-pelican-plugins/
-themes/Peli-Kiera/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
