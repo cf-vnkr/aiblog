@@ -56,7 +56,7 @@ while True:
     news_theme = random.choice(news_types)
 
     prompt = f"Give me one name for a {news_theme} related news article"
-    response_title = requests.post(
+    response = requests.post(
     f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/@cf/meta/llama-3-8b-instruct",
         headers={"Authorization": f"Bearer {AUTH_TOKEN}"},
         json={
@@ -68,6 +68,7 @@ while True:
     )
 
     try:
+        response_title = response
         title = return_answer(response_title)
         print(title)
     except Exception as e:
@@ -78,7 +79,7 @@ while True:
     title_slug = slugify(title)
 
     prompt = f"Create an article with 3 paragraphs named {title}."
-    response_article = requests.post(
+    response = requests.post(
     f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/@cf/meta/llama-3-8b-instruct",
         headers={"Authorization": f"Bearer {AUTH_TOKEN}"},
         json={
@@ -90,6 +91,7 @@ while True:
     )
 
     try:
+        response_article = response
         article = return_answer(response_article)
         print(article)
     except Exception as e:
