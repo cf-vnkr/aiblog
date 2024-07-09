@@ -124,6 +124,7 @@ while True:
         continue
 
     try:
+        subprocess.run(['git','pull'])
         subprocess.run(['pelican', 'content'])
         subprocess.run(['git', 'add', '.'])
         subprocess.run(['git', 'commit', '-m', today])
