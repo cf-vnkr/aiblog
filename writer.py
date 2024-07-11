@@ -135,4 +135,6 @@ while True:
         continue
 
     hour = 3600
-    time.sleep(random.randint(6, 36) * hour)
+    waiting_hours = random.randint(6, 24)
+    print(f"Waiting for {waiting_hours} hours.")
+    time.sleep(waiting_hours * hour)
