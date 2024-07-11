@@ -13,4 +13,4 @@ RUN git config --add --local core.sshCommand 'ssh -i ./id_rsa -o UserKnownHostsF
 RUN git config user.email '78567009+cf-vnkr@users.noreply.github.com'
 RUN git config user.name 'Alex'
 
-CMD [ "python", "writer.py" ]
+CMD [ "python", "-u", "writer.py" ]
