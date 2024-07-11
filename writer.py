@@ -72,7 +72,6 @@ while True:
     try:
         response.status_code
         title = return_answer(response)
-        print(title)
     except Exception as e:
        # By this way we can know about the type of error occurring
         print("Couldn't generate title: ",e)
@@ -95,7 +94,6 @@ while True:
     try:
         response.status_code
         article = return_answer(response)
-        print(article)
     except Exception as e:
        # By this way we can know about the type of error occurring
         print("Couldn't generate article body: ",e)
