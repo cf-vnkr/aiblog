@@ -9,6 +9,8 @@ import time
 
 ACCOUNT_ID = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
 AUTH_TOKEN = os.environ.get("CLOUDFLARE_AUTH_TOKEN")
+TEXT_MODEL = os.environ.get("TEXT_MODEL", "@cf/meta/llama-3-8b-instruct")
+IMAGE_MODEL = os.environ.get("IMAGE_MODEL", "@cf/stabilityai/stable-diffusion-xl-base-1.0")
 
 today = datetime.today().strftime('%Y-%m-%d %H:%M')
 today_date = datetime.today().strftime('%Y-%m-%d')
@@ -59,7 +61,7 @@ while True:
 
     prompt = f"Give me one name for a {news_theme} related news article"
     response = requests.post(
-    f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/@cf/meta/llama-3-8b-instruct",
+    f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/{TEXT_MODEL}",
         headers={"Authorization": f"Bearer {AUTH_TOKEN}"},
         json={
         "messages": [
@@ -81,7 +83,7 @@ while True:
 
     prompt = f"Create an article with 3 paragraphs named {title}."
     response = requests.post(
-    f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/@cf/meta/llama-3-8b-instruct",
+    f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/{TEXT_MODEL}",
         headers={"Authorization": f"Bearer {AUTH_TOKEN}"},
         json={
         "messages": [
@@ -102,7 +104,7 @@ while True:
     prompt = f"{title}"
     image_name = f"{today_date}-{title_slug}.png"
     response = requests.post(
-    f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/@cf/stabilityai/stable-diffusion-xl-base-1.0",
+    f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/{IMAGE_MODEL}",
         headers={"Authorization": f"Bearer {AUTH_TOKEN}"},
         json={"prompt": prompt}
     )
