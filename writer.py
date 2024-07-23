@@ -71,6 +71,8 @@ while True:
         }
     )
 
+    print(response.text)
+
     try:
         response.status_code
         title = return_answer(response)
