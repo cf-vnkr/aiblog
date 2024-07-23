@@ -19,7 +19,10 @@ today_date = datetime.today().strftime('%Y-%m-%d')
 def return_answer (response):
     dictionary = response.json()
     string = dictionary['result']['response']
-    answer = string.split("\n\n")[1]
+    if "\n\n" in string:
+        answer = string.split("\n\n")[1]
+    else:
+        answer = string
     return answer
 
 def write_article (title, title_slug, story, news_theme, image, today, today_date):
@@ -59,7 +62,7 @@ subprocess.run(['git','pull'])
 while True:
     news_theme = random.choice(news_types)
 
-    prompt = f"Give me one name for a {news_theme} related news article"
+    prompt = f"Give me one name for a {news_theme} related news article. No extra information."
     response = requests.post(
     f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/{TEXT_MODEL}",
         headers={"Authorization": f"Bearer {AUTH_TOKEN}"},
@@ -71,7 +74,6 @@ while True:
         }
     )
 
-    print(response.text)
 
     try:
         response.status_code
