@@ -14,3 +14,4 @@ RUN git config user.email '78567009+cf-vnkr@users.noreply.github.com'
 RUN git config user.name 'Alex'
 
 CMD [ "python", "-u", "writer.py" ]
+

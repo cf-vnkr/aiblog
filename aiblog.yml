@@ -5,7 +5,7 @@
 # 
 services:
   aiblog:
-    image: aiblog:latest
+    image: aiblog:2024.07.30.0
     env_file:
       - aiblog.env
     restart: unless-stopped
