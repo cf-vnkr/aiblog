@@ -12,9 +12,6 @@ AUTH_TOKEN = os.environ.get("CLOUDFLARE_AUTH_TOKEN")
 TEXT_MODEL = os.environ.get("TEXT_MODEL", "@cf/meta/llama-3-8b-instruct")
 IMAGE_MODEL = os.environ.get("IMAGE_MODEL", "@cf/stabilityai/stable-diffusion-xl-base-1.0")
 
-today = datetime.today().strftime('%Y-%m-%d %H:%M')
-today_date = datetime.today().strftime('%Y-%m-%d')
-
 
 def return_answer (response):
     dictionary = response.json()
@@ -67,6 +64,10 @@ news_types: list[str] = [
 subprocess.run(['git','pull'])
 
 while True:
+    # If not re-declared the date doesn't change as the script persists.
+    today = datetime.today().strftime('%Y-%m-%d %H:%M')
+    today_date = datetime.today().strftime('%Y-%m-%d')
+
     news_theme = random.choice(news_types)
 
     prompt = f"Give me one name for a {news_theme} related news article. No extra information."
